@@ -1,8 +1,6 @@
 package com.campusbike.campusbike.Ciudad.Dominio;
 
-import java.util.List;
 
-import com.campusbike.campusbike.Cliente.Dominio.Cliente;
 import com.campusbike.campusbike.Pais.Dominio.Pais;
 
 import jakarta.persistence.CascadeType;
