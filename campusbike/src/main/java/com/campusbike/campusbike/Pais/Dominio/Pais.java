@@ -28,8 +28,11 @@ public class Pais {
     @Column(columnDefinition = "bigint")
     private long id;
 
-    @Column(columnDefinition = "varchar(100)")
+    @Column(columnDefinition = "varchar(100)", unique = true)
     private String nombre;
+
+    @OneToMany(mappedBy = "pais")
+    private List<Ciudad> listCiudades; 
 
 
 }

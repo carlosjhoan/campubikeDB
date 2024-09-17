@@ -6,7 +6,7 @@ import java.util.Optional;
 public interface IPais {
 
     void createPais(Pais pais);
-    Optional <Pais> findPaisById(Long id);
+    Optional<Pais> findPaisById(Long id);
     void borrarPais(Pais pais);
     List<Pais> encontrarPaisPorNombre(String nombre);
 

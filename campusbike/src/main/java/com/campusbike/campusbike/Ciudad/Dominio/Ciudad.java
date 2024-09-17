@@ -1,6 +1,8 @@
 package com.campusbike.campusbike.Ciudad.Dominio;
 
 
+
+
 import com.campusbike.campusbike.Pais.Dominio.Pais;
 
 import jakarta.persistence.CascadeType;
@@ -28,7 +30,7 @@ public class Ciudad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(columnDefinition = "bigint")
-    private long id;
+    private Long id;
 
     @Column(columnDefinition = "varchar(100)")
     private String nombre;
@@ -36,6 +38,9 @@ public class Ciudad {
     @ManyToOne
     @JoinColumn(name = "paisId")
     private Pais pais;
+
+    @jakarta.persistence.Transient
+    private Long paisId;
 
     // @OneToMany(mappedBy = "ciudad", cascade = CascadeType.ALL, orphanRemoval = true,fetch = FetchType.EAGER)
     // private List<Cliente> clientes;
