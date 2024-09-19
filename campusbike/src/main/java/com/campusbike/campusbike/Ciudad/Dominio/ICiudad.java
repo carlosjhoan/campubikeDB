@@ -11,5 +11,6 @@ public interface ICiudad {
     Optional <Ciudad> findCiudadById(Long id);
     boolean deletePaisById(String nombre);
     List<Pais> encontrarPaisPorNombre(String nombre);
+    List<Ciudad> encontrarTodasCiudades();
 
 }

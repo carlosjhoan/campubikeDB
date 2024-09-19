@@ -45,11 +45,13 @@ public class PaisControlador {
         List<Pais> paisEncontrado = paisServicio.encontrarPaisPorNombre(pais.getNombre());
 
         if (paisEncontrado.size()==0) {
-            paisServicio.createPais(pais);;
+            paisServicio.createPais(pais);
             return "Pais guardado exitosamente";
-        } else {
+        } else if (paisEncontrado.size() > 0) {
             
-            return "Error al guardar el pais";
+            return "Este pais ya está registrado";
+        } else {
+            return "Error a registrar pais";
         }
     }
 

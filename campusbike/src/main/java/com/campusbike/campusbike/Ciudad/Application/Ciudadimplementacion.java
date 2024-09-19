@@ -42,6 +42,14 @@ public class Ciudadimplementacion implements ICiudad {
         return Optional.empty();
     }
 
+    @Override
+    public List<Ciudad> encontrarTodasCiudades() {
+        
+        return ciudadRepository.findAll();
+    }
+
+    
+
     
 
 
